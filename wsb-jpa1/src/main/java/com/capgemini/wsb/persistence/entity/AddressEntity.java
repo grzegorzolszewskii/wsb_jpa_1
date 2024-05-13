@@ -1,10 +1,6 @@
 package com.capgemini.wsb.persistence.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ADDRESS")
@@ -14,13 +10,25 @@ public class AddressEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column(name = "city", nullable = false)
 	private String city;
 
+	@Column(name = "addressLine1", nullable = false)
 	private String addressLine1;
 
+	@Column(name = "addressLine2")
 	private String addressLine2;
 
+	@Column(name = "postalCode")
 	private String postalCode;
+
+	// Relacja one to one z Doctor
+	@OneToOne(mappedBy = "address")
+	private DoctorEntity doctor;
+
+	// Relacja one to one z Patient
+	@OneToOne(mappedBy = "address")
+	private PatientEntity patient;
 
 	public Long getId() {
 		return id;

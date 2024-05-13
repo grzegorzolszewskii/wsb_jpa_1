@@ -2,14 +2,7 @@ package com.capgemini.wsb.persistence.entity;
 
 import com.capgemini.wsb.persistence.enums.TreatmentType;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "MEDICAL_TREATMENT")
@@ -19,11 +12,18 @@ public class MedicalTreatmentEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(nullable = false)
+	@Column(name = "description")
 	private String description;
 
+	@Column(name = "type")
 	@Enumerated(EnumType.STRING)
 	private TreatmentType type;
+
+	// Relacja many to one z Visit
+	@ManyToOne
+	@JoinColumn(name = "visit_id")
+	private VisitEntity visit;
+
 
 	public Long getId() {
 		return id;

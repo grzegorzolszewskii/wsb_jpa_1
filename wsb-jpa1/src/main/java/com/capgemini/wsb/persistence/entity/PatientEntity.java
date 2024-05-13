@@ -1,13 +1,9 @@
 package com.capgemini.wsb.persistence.entity;
 
 import java.time.LocalDate;
+import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "PATIENT")
@@ -17,22 +13,32 @@ public class PatientEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(nullable = false)
+	@Column(name = "firstName", nullable = false)
 	private String firstName;
 
-	@Column(nullable = false)
+	@Column(name = "lastName", nullable = false)
 	private String lastName;
 
-	@Column(nullable = false)
+	@Column(name = "telephoneNumber", nullable = false)
 	private String telephoneNumber;
 
+	@Column(name = "email")
 	private String email;
 
-	@Column(nullable = false)
+	@Column(name = "patientNumber", nullable = false)
 	private String patientNumber;
 
-	@Column(nullable = false)
+	@Column(name = "dateOfBirth", nullable = false)
 	private LocalDate dateOfBirth;
+
+	// Relacja one to one z Address
+	@OneToOne
+	@JoinColumn(name = "address_id")
+	private AddressEntity address;
+
+	// Relacja one to many z Visit
+	@OneToMany(mappedBy = "patient")
+	private List<VisitEntity> visits;
 
 	public Long getId() {
 		return id;

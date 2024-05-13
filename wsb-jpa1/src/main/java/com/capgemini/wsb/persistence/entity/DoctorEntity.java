@@ -2,14 +2,8 @@ package com.capgemini.wsb.persistence.entity;
 
 import com.capgemini.wsb.persistence.enums.Specialization;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "DOCTOR")
@@ -19,23 +13,33 @@ public class DoctorEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(nullable = false)
+	@Column(name = "firstName", nullable = false)
 	private String firstName;
 
-	@Column(nullable = false)
+	@Column(name = "lastName", nullable = false)
 	private String lastName;
 
-	@Column(nullable = false)
+	@Column(name = "telephoneNumber", nullable = false)
 	private String telephoneNumber;
 
+	@Column(name = "email")
 	private String email;
 
-	@Column(nullable = false)
+	@Column(name = "doctorNumber", nullable = false)
 	private String doctorNumber;
 
-	@Column(nullable = false)
+	@Column(name = "specialization", nullable = false)
 	@Enumerated(EnumType.STRING)
 	private Specialization specialization;
+
+	// Relacja one to one z Address
+	@OneToOne
+	@JoinColumn(name = "address_id")
+	private AddressEntity address;
+
+	// Relacja one to many z Visit
+	@OneToMany(mappedBy = "doctor")
+	private List<VisitEntity> visits;
 
 	public Long getId() {
 		return id;
