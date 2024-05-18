@@ -1,20 +1,21 @@
 package com.capgemini.wsb.dto;
 
+import com.capgemini.wsb.persistence.enums.Specialization;
+
 import javax.persistence.criteria.CriteriaBuilder;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
-public class PatientTO implements Serializable
+public class DoctorTO implements Serializable
 {
     private Long id;
     private String firstName;
     private String lastName;
     private String telephoneNumber;
     private String email;
-    private String patientNumber;
-    private LocalDate dateOfBirth;
-    private Boolean isEmployed;
+    private String doctorNumber;
+    private Specialization specialization;
 
     private AddressTO address;
     private List<Integer> visitsById;
@@ -60,27 +61,19 @@ public class PatientTO implements Serializable
     }
 
     public String getPatientNumber() {
-        return patientNumber;
+        return doctorNumber;
     }
 
     public void setPatientNumber(String patientNumber) {
-        this.patientNumber = patientNumber;
+        this.doctorNumber = patientNumber;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
+    public Specialization getSpecialization(){
+        return specialization;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public Boolean getIsEmployed(){
-        return isEmployed;
-    }
-
-    public void setIsEmployed(Boolean isEmployed){
-        this.isEmployed = isEmployed;
+    public void setSpecialization(Specialization specialization){
+        this.specialization = specialization;
     }
 
     public AddressTO getAddress() {

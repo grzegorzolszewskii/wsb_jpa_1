@@ -31,7 +31,7 @@ public class PatientEntity {
 	@Column(name = "dateOfBirth", nullable = false)
 	private LocalDate dateOfBirth;
 
-	@Column(name = "isEmployed", nullable = false)
+	@Column(name = "isEmployed")
 	private Boolean isEmployed;
 
 	// Relacja one to one z Address - jednostronna od strony rodzica
