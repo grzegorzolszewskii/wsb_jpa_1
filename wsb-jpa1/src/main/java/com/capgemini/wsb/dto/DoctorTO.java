@@ -18,7 +18,7 @@ public class DoctorTO implements Serializable
     private Specialization specialization;
 
     private AddressTO address;
-    private List<Integer> visitsById;
+    private List<Long> visitsById;
 
     public Long getId() {
         return id;
@@ -84,11 +84,11 @@ public class DoctorTO implements Serializable
         this.address = address;
     }
 
-    public List<Integer> getVisitsById() {
+    public List<Long> getVisitsById() {
         return visitsById;
     }
 
-    public void setVisitsById(List<Integer> visitsById) {
+    public void setVisitsById(List<Long> visitsById) {
         this.visitsById = visitsById;
     }
 
