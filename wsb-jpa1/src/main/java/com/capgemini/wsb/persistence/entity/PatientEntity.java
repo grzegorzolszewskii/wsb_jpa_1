@@ -31,13 +31,16 @@ public class PatientEntity {
 	@Column(name = "dateOfBirth", nullable = false)
 	private LocalDate dateOfBirth;
 
-	// Relacja one to one z Address
-	@OneToOne
-	@JoinColumn(name = "address_id")
+	@Column(name = "isEmployed", nullable = false)
+	private Boolean isEmployed;
+
+	// Relacja one to one z Address - jednostronna od strony rodzica
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "address_id", nullable = false)
 	private AddressEntity address;
 
-	// Relacja one to many z Visit
-	@OneToMany(mappedBy = "patient")
+	// Relacja one to many z Visit - dwustronna
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "patient")
 	private List<VisitEntity> visits;
 
 	public Long getId() {
@@ -95,5 +98,14 @@ public class PatientEntity {
 	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
+
+	public Boolean getIsEmployed(){
+		return isEmployed;
+	}
+
+	public void setIsEmployed(Boolean isEmployed){
+		this.isEmployed = isEmployed;
+	}
+
 
 }

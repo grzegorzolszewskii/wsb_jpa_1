@@ -22,13 +22,7 @@ public class AddressEntity {
 	@Column(name = "postalCode")
 	private String postalCode;
 
-	// Relacja one to one z Doctor
-	@OneToOne(mappedBy = "address")
-	private DoctorEntity doctor;
-
-	// Relacja one to one z Patient
-	@OneToOne(mappedBy = "address")
-	private PatientEntity patient;
+	// relacje z Doctor i Patient beda jednostronne, wiec nie beda tutaj zaimplementowane
 
 	public Long getId() {
 		return id;

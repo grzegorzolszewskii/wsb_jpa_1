@@ -19,12 +19,6 @@ public class MedicalTreatmentEntity {
 	@Enumerated(EnumType.STRING)
 	private TreatmentType type;
 
-	// Relacja many to one z Visit
-	@ManyToOne
-	@JoinColumn(name = "visit_id")
-	private VisitEntity visit;
-
-
 	public Long getId() {
 		return id;
 	}

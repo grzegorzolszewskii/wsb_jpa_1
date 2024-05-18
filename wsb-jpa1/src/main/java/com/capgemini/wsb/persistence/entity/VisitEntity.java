@@ -19,18 +19,19 @@ public class VisitEntity {
 	@Column(name = "time", nullable = false)
 	private LocalDateTime time;
 
-	// Relacja many to one z Doctor
+	// Relacja many to one z Doctor - dwustronna
 	@ManyToOne
 	@JoinColumn(name = "doctor_id")
 	private DoctorEntity doctor;
 
-	// Relacja many to one z Patient
+	// Relacja many to one z Patient - dwustronna
 	@ManyToOne
 	@JoinColumn(name = "patient_id")
 	private PatientEntity patient;
 
 	// Relacja one to many z MedicalTreatment
-	@OneToMany(mappedBy = "visit")
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "visit_id")
 	private List<MedicalTreatmentEntity> medicalTreatments;
 
 	public Long getId() {
