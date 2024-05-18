@@ -8,10 +8,10 @@ insert into doctor (id, first_name, last_name, telephone_number, email, doctor_n
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
             values (2, 'Janusz', 'Doktorowicz', '321621', 'jdoct@mail.com', '353', 'kardiolog', 2);
 
-insert into patient (id, first_name, last_name, telephone_number, email, patient_number, date_of_birth, address_id)
-            values (1, 'Adam', 'Pacjentowicz', '5555555', 'pacjent@mail.com', '101', '1995-01-01', 1);
-insert into patient (id, first_name, last_name, telephone_number, email, patient_number, date_of_birth, address_id)
-            values (2, 'Bartosz', 'Pacjencki', '111111', 'bartpac@mail.com', '102', '2000-05-05', 2);
+insert into patient (id, first_name, last_name, telephone_number, email, patient_number, date_of_birth, address_id, is_employed)
+            values (1, 'Adam', 'Pacjentowicz', '5555555', 'pacjent@mail.com', '101', '1995-01-01', 1, FALSE);
+insert into patient (id, first_name, last_name, telephone_number, email, patient_number, date_of_birth, address_id, is_employed)
+            values (2, 'Bartosz', 'Pacjencki', '111111', 'bartpac@mail.com', '102', '2000-05-05', 2, TRUE);
 
 insert into visit (id, description, time, doctor_id, patient_id)
             values (1, 'Wizyta codzienna', '2024-05-13 09:00:00', 1, 1);
