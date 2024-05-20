@@ -28,3 +28,4 @@ public class PatientServiceImpl implements PatientService
         return PatientMapper.mapToTO(entity);
     }
 }
+
