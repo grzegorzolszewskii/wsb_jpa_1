@@ -12,15 +12,15 @@ public class VisitMapper {
             return null;
         }
 
-        final VisitTO visitTo = new VisitTO();
-        visitTo.setId(visitEntity.getId());
-        visitTo.setDescription(visitEntity.getDescription());
-        visitTo.setDoctor(DoctorMapper.mapToTO(visitEntity.getDoctor()));
-        visitTo.setPatient(PatientMapper.mapToTO(visitEntity.getPatient()));
+        final VisitTO visitTO = new VisitTO();
+        visitTO.setId(visitEntity.getId());
+        visitTO.setDescription(visitEntity.getDescription());
+        visitTO.setDoctor(DoctorMapper.mapToTO(visitEntity.getDoctor()));
+        visitTO.setPatient(PatientMapper.mapToTO(visitEntity.getPatient()));
 
         // jak zmapowac medical treatment?
 
-        return visitTo;
+        return visitTO;
     }
 
     public static VisitEntity mapToEntity(final VisitTO visitTo)
