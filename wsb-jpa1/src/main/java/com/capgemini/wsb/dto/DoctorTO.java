@@ -2,9 +2,7 @@ package com.capgemini.wsb.dto;
 
 import com.capgemini.wsb.persistence.enums.Specialization;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.List;
 
 public class DoctorTO implements Serializable
@@ -18,6 +16,8 @@ public class DoctorTO implements Serializable
     private Specialization specialization;
 
     private AddressTO address;
+
+    // na potrzeby zadania 2 - TO trzyma ID wizyt
     private List<Long> visitsById;
 
     public Long getId() {
@@ -91,5 +91,4 @@ public class DoctorTO implements Serializable
     public void setVisitsById(List<Long> visitsById) {
         this.visitsById = visitsById;
     }
-
 }

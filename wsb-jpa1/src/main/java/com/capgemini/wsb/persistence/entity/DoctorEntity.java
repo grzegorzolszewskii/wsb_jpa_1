@@ -1,5 +1,6 @@
 package com.capgemini.wsb.persistence.entity;
 
+import com.capgemini.wsb.dto.AddressTO;
 import com.capgemini.wsb.persistence.enums.Specialization;
 
 import javax.persistence.*;
