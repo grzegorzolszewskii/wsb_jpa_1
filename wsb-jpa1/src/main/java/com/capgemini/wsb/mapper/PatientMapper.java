@@ -24,12 +24,13 @@ public final class PatientMapper
         patientTO.setPatientNumber(patientEntity.getPatientNumber());
         patientTO.setDateOfBirth(patientEntity.getDateOfBirth());
         patientTO.setIsEmployed(patientEntity.getIsEmployed());
+
         patientTO.setAddress(AddressMapper.mapToTO(patientEntity.getAddress()));
 
-        // Entity przechowuje liste encji, TO przechowuje liste ID
-        patientTO.setVisitsById(patientEntity.getVisits().stream()
-                .map(VisitEntity::getId).collect(Collectors.toList())
-        );
+        patientTO.setVisits(patientEntity.getVisits().stream()
+                .map(VisitMapper::mapToTO)
+                .collect(Collectors.toList()));
+
 
         return patientTO;
     }
@@ -51,7 +52,11 @@ public final class PatientMapper
         patientEntity.setDateOfBirth(patientTo.getDateOfBirth());
         patientEntity.setIsEmployed(patientTo.getIsEmployed());
 
-        // Czy niezbedne jest mapowanie Visit takze w tym miejscu?
+        patientEntity.setAddress(AddressMapper.mapToEntity(patientTo.getAddress()));
+
+        patientEntity.setVisits(patientTo.getVisits().stream()
+                .map(VisitMapper::mapToEntity)
+                .collect(Collectors.toList()));
 
         return patientEntity;
     }

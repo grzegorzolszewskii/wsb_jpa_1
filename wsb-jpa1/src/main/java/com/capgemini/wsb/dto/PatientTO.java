@@ -16,9 +16,8 @@ public class PatientTO implements Serializable
     private Boolean isEmployed;
 
     private AddressTO address;
+    private List<VisitTO> visits;
 
-    // na potrzeby zadania 2 - TO trzyma ID wizyt
-    private List<Long> visitsById;
 
     public Long getId() {
         return id;
@@ -92,12 +91,12 @@ public class PatientTO implements Serializable
         this.address = address;
     }
 
-    public List<Long> getVisitsById() {
-        return visitsById;
+    public List<VisitTO> getVisits() {
+        return visits;
     }
 
-    public void setVisitsById(List<Long> visitsById) {
-        this.visitsById = visitsById;
+    public void setVisits(List<VisitTO> visits) {
+        this.visits = visits;
     }
 
 }

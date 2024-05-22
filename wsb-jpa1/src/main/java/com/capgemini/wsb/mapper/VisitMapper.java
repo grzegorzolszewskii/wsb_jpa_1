@@ -3,6 +3,8 @@ package com.capgemini.wsb.mapper;
 import com.capgemini.wsb.dto.VisitTO;
 import com.capgemini.wsb.persistence.entity.VisitEntity;
 
+import java.util.stream.Collectors;
+
 public class VisitMapper {
 
     public static VisitTO mapToTO(final VisitEntity visitEntity)
@@ -18,7 +20,9 @@ public class VisitMapper {
         visitTO.setDoctor(DoctorMapper.mapToTO(visitEntity.getDoctor()));
         visitTO.setPatient(PatientMapper.mapToTO(visitEntity.getPatient()));
 
-        // jak zmapowac medical treatment?
+        visitTO.setMedicalTreatments(visitEntity.getMedicalTreatments().stream()
+                .map(MedicalTreatmentMapper::mapToTO)
+                .collect(Collectors.toList()));
 
         return visitTO;
     }
@@ -36,7 +40,9 @@ public class VisitMapper {
         visitEntity.setDoctor(DoctorMapper.mapToEntity(visitTo.getDoctor()));
         visitEntity.setPatient(PatientMapper.mapToEntity(visitTo.getPatient()));
 
-        // jak i czy zmapowac medical treatment?
+        visitEntity.setMedicalTreatments(visitTo.getMedicalTreatments().stream()
+                .map(MedicalTreatmentMapper::mapToEntity)
+                .collect(Collectors.toList()));
 
         return visitEntity;
     }

@@ -21,12 +21,12 @@ public final class DoctorMapper
         doctorTO.setLastName(doctorEntity.getLastName());
         doctorTO.setTelephoneNumber(doctorEntity.getTelephoneNumber());
         doctorTO.setEmail(doctorEntity.getEmail());
+
         doctorTO.setAddress(AddressMapper.mapToTO(doctorEntity.getAddress()));
 
-        // Entity przechowuje liste encji, TO przechowuje liste ID
-        doctorTO.setVisitsById(doctorEntity.getVisits().stream()
-                .map(VisitEntity::getId).collect(Collectors.toList())
-        );
+        doctorTO.setVisits(doctorEntity.getVisits().stream()
+                .map(VisitMapper::mapToTO)
+                .collect(Collectors.toList()));
 
         return doctorTO;
     }
@@ -43,7 +43,12 @@ public final class DoctorMapper
         doctorEntity.setLastName(doctorTO.getLastName());
         doctorEntity.setTelephoneNumber(doctorTO.getTelephoneNumber());
         doctorEntity.setEmail(doctorTO.getEmail());
+
         doctorEntity.setAddress(AddressMapper.mapToEntity(doctorTO.getAddress()));
+
+        doctorEntity.setVisits(doctorTO.getVisits().stream()
+                .map(VisitMapper::mapToEntity)
+                .collect(Collectors.toList()));
 
         return doctorEntity;
     }
