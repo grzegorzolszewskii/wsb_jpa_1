@@ -46,7 +46,7 @@ public class PatientDaoImpl extends AbstractDao<PatientEntity, Long> implements 
     @Override
     public List<PatientEntity> findByEmploymentType(Boolean employmentType) {
         return entityManager.createQuery("SELECT p from PatentEntity p " +
-                "WHERE p.IS_EMPLOYED = :employmentType", PatientEntity.class)
+                        "WHERE p.IS_EMPLOYED = :employmentType", PatientEntity.class)
                 .setParameter("employmentType", employmentType)
                 .getResultList();
     }
