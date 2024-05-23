@@ -23,7 +23,7 @@ public class VisitServiceImpl implements VisitService
     }
 
     @Override
-    public VisitTO findById(Long id) {
+    public VisitTO findById(Integer id) {
         final VisitEntity entity = visitDao.findOne(id);
         return VisitMapper.mapToTO(entity);
     }

@@ -4,5 +4,5 @@ import com.capgemini.wsb.dto.VisitTO;
 
 public interface VisitService
 {
-    public VisitTO findById(final Long id);
+    public VisitTO findById(final Integer id);
 }

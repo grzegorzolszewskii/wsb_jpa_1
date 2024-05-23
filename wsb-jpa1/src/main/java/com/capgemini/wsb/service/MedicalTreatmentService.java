@@ -4,5 +4,5 @@ import com.capgemini.wsb.dto.MedicalTreatmentTO;
 
 public interface MedicalTreatmentService
 {
-    public MedicalTreatmentTO findById(final Long id);
+    public MedicalTreatmentTO findById(final Integer id);
 }

@@ -5,17 +5,17 @@ import java.util.List;
 
 public class VisitTO implements Serializable
 {
-    private Long id;
+    private Integer id;
     private String description;
     private DoctorTO doctor;
     private PatientTO patient;
     private List<MedicalTreatmentTO> medicalTreatments;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

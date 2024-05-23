@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class DoctorDaoImpl extends AbstractDao<DoctorEntity, Long> implements DoctorDao
+public class DoctorDaoImpl extends AbstractDao<DoctorEntity, Integer> implements DoctorDao
 {
     @Override
     public List<DoctorEntity> findByDescription(String pDesc){

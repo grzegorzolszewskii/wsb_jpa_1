@@ -12,7 +12,7 @@ public class DoctorEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(name = "firstName", nullable = false)
 	private String firstName;
@@ -42,11 +42,11 @@ public class DoctorEntity {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "doctor")
 	private List<VisitEntity> visits;
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

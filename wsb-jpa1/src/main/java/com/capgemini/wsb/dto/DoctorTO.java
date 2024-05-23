@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DoctorTO implements Serializable
 {
-    private Long id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private String telephoneNumber;
@@ -19,11 +19,11 @@ public class DoctorTO implements Serializable
     private AddressTO address;
     private List<VisitTO> visits;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

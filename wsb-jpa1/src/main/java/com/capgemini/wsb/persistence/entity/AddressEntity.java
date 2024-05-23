@@ -8,7 +8,7 @@ public class AddressEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(name = "city", nullable = false)
 	private String city;
@@ -24,11 +24,11 @@ public class AddressEntity {
 
 	// relacje z Doctor i Patient beda jednostronne, wiec nie beda tutaj zaimplementowane
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

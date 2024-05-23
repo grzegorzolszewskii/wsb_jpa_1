@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface PatientService
 {
-    public PatientTO findById(final Long id);
+    public PatientTO findById(final Integer id);
 
-    public void deletePatient(Long id);
+    public void deletePatient(Integer id);
 
-    public List<VisitTO> findVisitsByPatientId(Long id);
+    public List<VisitTO> findVisitsByPatientId(Integer id);
 }

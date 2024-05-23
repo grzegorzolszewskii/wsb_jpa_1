@@ -33,14 +33,11 @@ public class PatientDaoTest {
 
     @Test
      public void testShouldFindPatientsWithMoreVisitsThan(){
-        // given resources/data.sql
+        // given - only patient with id 1 has 2 visits, the rest have 1 visit
         // when
-        Long visitCount = 1L;
-        System.out.println("Type of visitCount: " + ((Object) visitCount).getClass().getName());
-        List<PatientEntity> patientsList = patientDao.findPatientsWithMoreVisitsThan(visitCount);
+        List<PatientEntity> patientsList = patientDao.findPatientsWithMoreVisitsThan(1);
         // then
-        // assertThat(patientsList).hasSize(1);
-        assertThat(patientsList).isNotEmpty();
+        assertThat(patientsList).hasSize(1);
      }
 
     public void testShouldFindByEmploymentType(){

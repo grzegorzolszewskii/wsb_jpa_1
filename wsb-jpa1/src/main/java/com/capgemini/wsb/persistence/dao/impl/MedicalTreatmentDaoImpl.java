@@ -5,7 +5,7 @@ import com.capgemini.wsb.persistence.entity.MedicalTreatmentEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MedicalTreatmentDaoImpl extends AbstractDao<MedicalTreatmentEntity, Long> implements MedicalTreatmentDao
+public class MedicalTreatmentDaoImpl extends AbstractDao<MedicalTreatmentEntity, Integer> implements MedicalTreatmentDao
 {
 
 }

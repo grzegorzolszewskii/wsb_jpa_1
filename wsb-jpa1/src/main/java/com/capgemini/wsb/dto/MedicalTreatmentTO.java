@@ -5,15 +5,15 @@ import com.capgemini.wsb.persistence.enums.TreatmentType;
 import java.io.Serializable;
 
 public class MedicalTreatmentTO implements Serializable {
-    private Long id;
+    private Integer id;
     private String description;
     private TreatmentType type;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

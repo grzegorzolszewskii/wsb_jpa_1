@@ -19,7 +19,7 @@ public class AddressController
     }
 
     @GetMapping("/address/{id}")
-    AddressTO findBaId(@PathVariable final Long id) {
+    AddressTO findBaId(@PathVariable final Integer id) {
         final AddressTO address = addressService.findById(id);
         if(address != null)
         {

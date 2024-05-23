@@ -28,18 +28,18 @@ public class PatientServiceImpl implements PatientService
     }
 
     @Override
-    public PatientTO findById(Long id) {
+    public PatientTO findById(Integer id) {
         final PatientEntity entity = patientDao.findOne(id);
         return PatientMapper.mapToTO(entity);
     }
 
     @Override
-    public void deletePatient(Long id) {
+    public void deletePatient(Integer id) {
         patientDao.delete(id);
     }
 
     @Override
-    public List<VisitTO> findVisitsByPatientId(Long id) {
+    public List<VisitTO> findVisitsByPatientId(Integer id) {
         return patientDao.findVisitsByPatientId(id)
                 .stream().map(VisitMapper::mapToTO)
                 .collect(Collectors.toList());

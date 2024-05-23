@@ -23,7 +23,7 @@ public class AddressServiceImpl implements AddressService
     }
 
     @Override
-    public AddressTO findById(Long id) {
+    public AddressTO findById(Integer id) {
         final AddressEntity entity = addressDao.findOne(id);
         return AddressMapper.mapToTO(entity);
     }

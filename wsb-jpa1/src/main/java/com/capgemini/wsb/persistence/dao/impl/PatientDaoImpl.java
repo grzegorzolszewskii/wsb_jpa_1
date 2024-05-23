@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class PatientDaoImpl extends AbstractDao<PatientEntity, Long> implements PatientDao
+public class PatientDaoImpl extends AbstractDao<PatientEntity, Integer> implements PatientDao
 {
 
     @Override
@@ -28,7 +28,7 @@ public class PatientDaoImpl extends AbstractDao<PatientEntity, Long> implements 
     }
 
     @Override
-    public List<VisitEntity> findVisitsByPatientId(Long id) {
+    public List<VisitEntity> findVisitsByPatientId(Integer id) {
         return entityManager.createQuery("SELECT v FROM VisitEntity v " +
                         "WHERE v.patient.id = :id", VisitEntity.class)
                 .setParameter("id", id)
@@ -36,7 +36,7 @@ public class PatientDaoImpl extends AbstractDao<PatientEntity, Long> implements 
     }
 
     @Override
-    public List<PatientEntity> findPatientsWithMoreVisitsThan(Long visitsNum) {
+    public List<PatientEntity> findPatientsWithMoreVisitsThan(Integer visitsNum) {
         return entityManager.createQuery("SELECT p FROM PatientEntity p " +
                         "WHERE SIZE(p.visits) > :visitsNum", PatientEntity.class)
                 .setParameter("visitsNum", visitsNum)

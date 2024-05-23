@@ -21,7 +21,7 @@ public interface Dao<T, K extends Serializable> {
 
     void deleteAll();
 
-    long count();
+    Integer count();
 
     boolean exists(K id);
 }

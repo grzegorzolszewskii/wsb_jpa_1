@@ -5,7 +5,7 @@ import com.capgemini.wsb.persistence.entity.VisitEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class VisitDaoImpl extends AbstractDao<VisitEntity, Long> implements VisitDao
+public class VisitDaoImpl extends AbstractDao<VisitEntity, Integer> implements VisitDao
 {
 
 }

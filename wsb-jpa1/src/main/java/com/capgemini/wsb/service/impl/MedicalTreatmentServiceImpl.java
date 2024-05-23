@@ -23,7 +23,7 @@ public class MedicalTreatmentServiceImpl implements MedicalTreatmentService
     }
 
     @Override
-    public MedicalTreatmentTO findById(Long id) {
+    public MedicalTreatmentTO findById(Integer id) {
         final MedicalTreatmentEntity entity = medicalTreatmentDao.findOne(id);
         return MedicalTreatmentMapper.mapToTO(entity);
     }

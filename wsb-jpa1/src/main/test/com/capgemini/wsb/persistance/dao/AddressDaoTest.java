@@ -23,7 +23,7 @@ public class AddressDaoTest
     public void testShouldFindAddressById() {
         // given
         // when
-        AddressEntity addressEntity = addressDao.findOne(1L);
+        AddressEntity addressEntity = addressDao.findOne(1);
         // then
         assertThat(addressEntity).isNotNull();
         assertThat(addressEntity.getPostalCode()).isEqualTo("62-030");
@@ -37,7 +37,7 @@ public class AddressDaoTest
         addressEntity.setAddressLine2("line2");
         addressEntity.setCity("City1");
         addressEntity.setPostalCode("66-666");
-        long entitiesNumBefore = addressDao.count();
+        Integer entitiesNumBefore = addressDao.count();
 
         // when
         final AddressEntity saved = addressDao.save(addressEntity);
