@@ -4,5 +4,14 @@ public enum TreatmentType {
 
 	USG,
 	EKG,
-	RTG
+	RTG,
+	PRZEZIEBIENIE,
+	ALERGIA,
+	GORACZKA,
+	OKO,
+	URAZ,
+	OPERACJA,
+	ZAB,
+	REHABILITACJA,
+	LECZENIE
 }

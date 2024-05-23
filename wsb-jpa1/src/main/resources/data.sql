@@ -105,27 +105,27 @@ insert into visit (id, description, time, doctor_id, patient_id)
             values (13, 'Badanie ginekologiczne', '2024-05-24 10:00:00', 12, 1);
 
 insert into medical_treatment (id, description, type, visit_id)
-            values (1, 'gripex', 'przeziebienie', 1);
+            values (1, 'gripex', 'PRZEZIEBIENIE', 1);
 insert into medical_treatment (id, description, type, visit_id)
-            values (2, 'alergix', 'alergia', 2);
+            values (2, 'alergix', 'ALERGIA', 2);
 insert into medical_treatment (id, description, type, visit_id)
-            values (3, 'ibuprom', 'ból głowy', 3);
+            values (3, 'ibuprom', 'GORACZKA', 3);
 insert into medical_treatment (id, description, type, visit_id)
-            values (4, 'apap', 'gorączka', 4);
+            values (4, 'apap', 'GORACZKA', 4);
 insert into medical_treatment (id, description, type, visit_id)
-            values (5, 'krople do oczu', 'podrażnienie oka', 5);
+            values (5, 'krople do oczu', 'OKO', 5);
 insert into medical_treatment (id, description, type, visit_id)
-            values (6, 'opatrunek', 'uraz', 6);
+            values (6, 'opatrunek', 'URAZ', 6);
 insert into medical_treatment (id, description, type, visit_id)
-            values (7, 'zastrzyk', 'operacja', 7);
+            values (7, 'zastrzyk', 'OPERACJA', 7);
 insert into medical_treatment (id, description, type, visit_id)
-            values (8, 'EKG', 'badanie serca', 8);
+            values (8, 'EKG', 'EKG', 8);
 insert into medical_treatment (id, description, type, visit_id)
-            values (9, 'plombowanie', 'leczenie zęba', 9);
+            values (9, 'plombowanie', 'ZAB', 9);
 insert into medical_treatment (id, description, type, visit_id)
-            values (10, 'ćwiczenia fizyczne', 'rehabilitacja', 10);
+            values (10, 'ćwiczenia fizyczne', 'REHABILITACJA', 10);
 insert into medical_treatment (id, description, type, visit_id)
-            values (11, 'terapia', 'leczenie psychiczne', 11);
+            values (11, 'terapia', 'LECZENIE', 11);
 insert into medical_treatment (id, description, type, visit_id)
-            values (12, 'badanie cytologiczne', 'profilaktyka', 12);
+            values (12, 'badanie cytologiczne', 'LECZENIE', 12);
 
