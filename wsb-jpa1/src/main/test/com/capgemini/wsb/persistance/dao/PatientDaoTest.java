@@ -22,7 +22,17 @@ public class PatientDaoTest {
     private PatientDao patientDao;
 
     @Test
-    public void testShouldFindByLastName(){
+    public void testShouldFindByFirstName(){
+        // given resources/data.sql - jest 2 pacjentow o imieniu Leszek
+        // when
+        List<PatientEntity> patientsList = patientDao.findByFirstName("Leszek");
+
+        // then
+        assertThat(patientsList).hasSize(2);
+    }
+
+    @Test
+    public void testShouldFindByLastName() {
         // given resources/data.sql - jest 2 pacjentow o naziwsku Zdolny
         // when
         List<PatientEntity> patientsList = patientDao.findByLastName("Zdolny");

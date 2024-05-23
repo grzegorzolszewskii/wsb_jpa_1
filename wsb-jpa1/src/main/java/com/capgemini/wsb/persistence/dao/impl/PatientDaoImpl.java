@@ -14,8 +14,8 @@ public class PatientDaoImpl extends AbstractDao<PatientEntity, Integer> implemen
     @Override
     public List<PatientEntity> findByFirstName(String firstName) {
         return entityManager.createQuery("SELECT p FROM PatientEntity p " +
-                        "WHERE patient.firstName LIKE :firstName", PatientEntity.class)
-                .setParameter("FIRST_NAME", firstName)
+                        "WHERE p.firstName LIKE :firstName", PatientEntity.class)
+                .setParameter("firstName", firstName)
                 .getResultList();
     }
 
