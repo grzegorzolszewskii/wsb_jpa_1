@@ -15,14 +15,14 @@ public class PatientDaoImpl extends AbstractDao<PatientEntity, Integer> implemen
     public List<PatientEntity> findByFirstName(String firstName) {
         return entityManager.createQuery("SELECT p FROM PatientEntity p " +
                         "WHERE patient.firstName LIKE :firstName", PatientEntity.class)
-                .setParameter("firstName", firstName)
+                .setParameter("FIRST_NAME", firstName)
                 .getResultList();
     }
 
     @Override
     public List<PatientEntity> findByLastName(String lastName) {
         return entityManager.createQuery("SELECT p FROM PatientEntity p " +
-                        "WHERE p.lastName LIKE :lastName", PatientEntity.class)
+                        "WHERE p.lastName = :lastName", PatientEntity.class)
                 .setParameter("lastName", lastName)
                 .getResultList();
     }

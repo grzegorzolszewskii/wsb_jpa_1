@@ -74,6 +74,8 @@ insert into patient (id, first_name, last_name, telephone_number, email, patient
             values (11, 'Katarzyna', 'Biegaczka', '606060', 'katarzyna@biegaczka.com', '111', '1990-02-28', 11, TRUE);
 insert into patient (id, first_name, last_name, telephone_number, email, patient_number, date_of_birth, address_id, is_employed)
             values (12, 'Leszek', 'Spacerujący', '707070', 'leszek@spacerujacy.com', '112', '1960-10-10', 12, FALSE);
+insert into patient (id, first_name, last_name, telephone_number, email, patient_number, date_of_birth, address_id, is_employed)
+            values (13, 'Leszek', 'Zdolny', '707071', 'leszekzd@mailik.com', '113', '1960-11-11', 12, FALSE);
 
 insert into visit (id, description, time, doctor_id, patient_id)
             values (1, 'Konsultacja dermatologiczna', '2024-05-13 09:00:00', 1, 1);

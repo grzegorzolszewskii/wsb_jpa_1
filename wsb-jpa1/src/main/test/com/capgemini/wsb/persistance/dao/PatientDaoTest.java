@@ -23,17 +23,17 @@ public class PatientDaoTest {
 
     @Test
     public void testShouldFindByLastName(){
-        // given resources/data.sql
+        // given resources/data.sql - jest 2 pacjentow o naziwsku Zdolny
         // when
-        List<PatientEntity> patientsList = patientDao.findByLastName("Medyczna");
+        List<PatientEntity> patientsList = patientDao.findByLastName("Zdolny");
 
         // then
-        assertThat(patientsList).hasSize(1);
+        assertThat(patientsList).hasSize(2);
     }
 
     @Test
      public void testShouldFindPatientsWithMoreVisitsThan(){
-        // given - only patient with id 1 has 2 visits, the rest have 1 visit
+        // given - tylko jeden pacjent ma wiecej niz jedna wizyte
         // when
         List<PatientEntity> patientsList = patientDao.findPatientsWithMoreVisitsThan(1);
         // then
