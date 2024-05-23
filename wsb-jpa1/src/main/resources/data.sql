@@ -25,29 +25,29 @@ insert into address (id, address_line1, address_line2, city, postal_code)
 
 
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (1, 'Jan', 'Doktorski', '123456789', 'jdo@mail.com', '352', 'dermatolog', 1);
+            values (1, 'Jan', 'Doktorski', '123456789', 'jdo@mail.com', '352', 'DERMATOLOG', 1);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (2, 'Janusz', 'Doktorowicz', '321621', 'jdoct@mail.com', '353', 'kardiolog', 2);
+            values (2, 'Janusz', 'Doktorowicz', '321621', 'jdoct@mail.com', '353', 'KARDIOLOG', 2);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (3, 'Anna', 'Lekarska', '987654321', 'alek@mail.com', '354', 'pediatra', 3);
+            values (3, 'Anna', 'Lekarska', '987654321', 'alek@mail.com', '354', 'PEDIATRA', 3);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (4, 'Barbara', 'Medyczna', '654987321', 'bmed@mail.com', '355', 'neurolog', 4);
+            values (4, 'Barbara', 'Medyczna', '654987321', 'bmed@mail.com', '355', 'NEUROLOG', 4);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (5, 'Celina', 'Zdrowia', '159753468', 'czdrowia@mail.com', '356', 'okulista', 5);
+            values (5, 'Celina', 'Zdrowia', '159753468', 'czdrowia@mail.com', '356', 'OKULISTA', 5);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (6, 'Dominik', 'Zdrowotny', '753951864', 'd.zdrowotny@mail.com', '357', 'ortopeda', 6);
+            values (6, 'Dominik', 'Zdrowotny', '753951864', 'd.zdrowotny@mail.com', '357', 'ORTOPEDA', 6);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (7, 'Eliza', 'Chirurgiczna', '369852147', 'echirurg@mail.com', '358', 'chirurg', 7);
+            values (7, 'Eliza', 'Chirurgiczna', '369852147', 'echirurg@mail.com', '358', 'CHIRURG', 7);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (8, 'Franciszek', 'Kardiolog', '258147369', 'fkardio@mail.com', '359', 'kardiolog', 8);
+            values (8, 'Franciszek', 'Kardiolog', '258147369', 'fkardio@mail.com', '359', 'KARDIOLOG', 8);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (9, 'Gabriel', 'Dentysta', '852369741', 'gabdent@mail.com', '360', 'dentysta', 9);
+            values (9, 'Gabriel', 'Dentysta', '852369741', 'gabdent@mail.com', '360', 'DENTYSTA', 9);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (10, 'Hanna', 'Rehabilitacyjna', '147258369', 'hrehab@mail.com', '361', 'rehabilitant', 10);
+            values (10, 'Hanna', 'Rehabilitacyjna', '147258369', 'hrehab@mail.com', '361', 'REHABILITANT', 10);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (11, 'Igor', 'Psychiatra', '369852147', 'ipsychiatr@mail.com', '362', 'psychiatra', 11);
+            values (11, 'Igor', 'Psychiatra', '369852147', 'ipsychiatr@mail.com', '362', 'PSYCHIATRA', 11);
 insert into doctor (id, first_name, last_name, telephone_number, email, doctor_number, specialization, address_id)
-            values (12, 'Jolanta', 'Ginekolog', '258147369', 'jol.gin@mail.com', '363', 'ginekolog', 12);
+            values (12, 'Jolanta', 'Ginekolog', '258147369', 'jol.gin@mail.com', '363', 'GINEKOLOG', 12);
 
 
 insert into patient (id, first_name, last_name, telephone_number, email, patient_number, date_of_birth, address_id, is_employed)

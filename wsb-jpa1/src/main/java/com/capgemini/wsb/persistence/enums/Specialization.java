@@ -2,9 +2,17 @@ package com.capgemini.wsb.persistence.enums;
 
 public enum Specialization {
 
-	SURGEON,
-	GP,
-	DERMATOLOGIST,
-	OCULIST
+	DERMATOLOG,
+	KARDIOLOG,
+	PEDIATRA,
+	NEUROLOG,
+	OKULISTA,
+	ORTOPEDA,
+	CHIRURG,
+	DENTYSTA,
+	REHABILITANT,
+	PSYCHIATRA,
+	GINEKOLOG
+
 
 }
