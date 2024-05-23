@@ -40,10 +40,14 @@ public class PatientDaoTest {
         assertThat(patientsList).hasSize(1);
      }
 
+     @Test
     public void testShouldFindByEmploymentType(){
-        // given resources/data.sql
+        // given - 7 pacjentow jest zatrudnionych
+
         // when
+        List<PatientEntity> patientsList = patientDao.findByEmploymentType(true);
 
         // then
+        assertThat(patientsList).hasSize(7);
     }
 }
