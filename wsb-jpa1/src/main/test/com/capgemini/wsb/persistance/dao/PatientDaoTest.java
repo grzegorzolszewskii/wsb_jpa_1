@@ -53,7 +53,6 @@ public class PatientDaoTest {
      @Test
     public void testShouldFindByEmploymentType(){
         // given - 7 pacjentow jest zatrudnionych
-
         // when
         List<PatientEntity> patientsList = patientDao.findByEmploymentType(true);
 

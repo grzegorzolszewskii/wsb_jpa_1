@@ -29,7 +29,7 @@ public class VisitEntity {
 	@JoinColumn(name = "patient_id")
 	private PatientEntity patient;
 
-	// Relacja one to many z MedicalTreatment
+	// Relacja one to many z MedicalTreatment - jednostronna
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "visit_id")
 	private List<MedicalTreatmentEntity> medicalTreatments;
