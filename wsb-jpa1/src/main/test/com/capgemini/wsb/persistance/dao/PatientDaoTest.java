@@ -43,7 +43,7 @@ public class PatientDaoTest {
 
     @Test
      public void testShouldFindPatientsWithMoreVisitsThan(){
-        // given - tylko jeden pacjent ma wiecej niz jedna wizyte
+        // given resources/data.sql - tylko jeden pacjent ma wiecej niz jedna wizyte
         // when
         List<PatientEntity> patientsList = patientDao.findPatientsWithMoreVisitsThan(1);
         // then

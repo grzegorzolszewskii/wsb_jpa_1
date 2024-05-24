@@ -12,6 +12,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+// niestety jeszcze nie działają
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PatientServiceTest {
